@@ -17,12 +17,12 @@ BuildRequires : buildreq-distutils3
 Provides: serpent
 Provides: serpent-python
 Provides: serpent-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : pytz
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 Serpent is a simple serialization library based on ast.literal_eval.
