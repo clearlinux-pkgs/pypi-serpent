@@ -4,7 +4,7 @@
 #
 Name     : pypi-serpent
 Version  : 1.40
-Release  : 31
+Release  : 32
 URL      : https://files.pythonhosted.org/packages/16/c3/e42362d4d3853fbd407fdd21e1d31c4aea363ebec9950d36dbada4522293/serpent-1.40.tar.gz
 Source0  : https://files.pythonhosted.org/packages/16/c3/e42362d4d3853fbd407fdd21e1d31c4aea363ebec9950d36dbada4522293/serpent-1.40.tar.gz
 Summary  : Serialization based on ast.literal_eval
@@ -14,15 +14,12 @@ Requires: pypi-serpent-license = %{version}-%{release}
 Requires: pypi-serpent-python = %{version}-%{release}
 Requires: pypi-serpent-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: serpent
-Provides: serpent-python
-Provides: serpent-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : pytz
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pytz)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 Serpent is a simple serialization library based on ast.literal_eval.
@@ -75,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641497257
+export SOURCE_DATE_EPOCH=1647898216
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
